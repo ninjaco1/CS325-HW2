@@ -3,6 +3,7 @@ import numpy as np
 import time
 import os
 
+#where all the functions are called
 def main():
     data = open("data.txt", "r")
     line = data.readlines()
@@ -26,6 +27,7 @@ def main():
     # mergesort(array)
     # print (array)
 
+# where the sorted array gets outputted to a file
 def out_file(array):
     out = open("merge3.txt", "w")
     out.truncate(0)
@@ -38,6 +40,7 @@ def out_file(array):
     #print(write)
     out.close()
 
+#mergesort 3
 def mergesort3(array):
     # if the len of the array is less than 2 return
     if len(array) >1:
@@ -56,7 +59,7 @@ def mergesort3(array):
         mergesort3(up)
         merge(array,bot,mid,up)
 
-
+#merges 3 arrays together into one
 def merge(array,bot,mid,up):
     #conquer
     i = j = k = z = 0 # bot, mid, up, main array

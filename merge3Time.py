@@ -3,7 +3,7 @@ from random import randint
 import numpy as np
 import time
 
-
+# within the main function this is wear all the fucntions are called
 def main():
     run_time = []
     for i in range(50000,550000,50000):
@@ -29,13 +29,14 @@ def main():
         for number in temp_runtime:
             string += str(number) + " "
         string += "\n"
-        #print(string) 
+        #print(string)
         run_time.append(string)
         array.clear()
         temp_runtime.clear()
     #print(run_time)
     runtime_file(run_time)
 
+# inputs run time values in file
 def runtime_file(runtime):
     file = open("merge3time.txt","w")
     file.truncate(0)
@@ -43,7 +44,7 @@ def runtime_file(runtime):
         file.write(string)
     file.close()
 
-
+# mergesort3
 def mergesort3(array):
     # if the len of the array is less than 2 return
     if len(array) >1:
@@ -62,7 +63,7 @@ def mergesort3(array):
         mergesort3(up)
         merge(array,bot,mid,up)
 
-
+#merges the 3 arrays together into one 
 def merge(array,bot,mid,up):
     #conquer
     i = j = k = z = 0 # bot, mid, up, main array
