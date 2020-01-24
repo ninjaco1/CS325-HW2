@@ -13,6 +13,7 @@ def main():
     # loop through each line and sort and append each line into array
     for j in range(len(line)):
         temp = [int(i) for i in line[j].split() if i.isdigit()]
+        temp.pop(0)
         mergesort3(temp)
         array.append(temp)
 

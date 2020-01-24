@@ -7,6 +7,7 @@ import time
 def main():
     run_time = []
     for i in range(50000,550000,50000):
+        print("length " + str(i) )
         array = []
         sum = 0
         temp_runtime =[]
@@ -63,7 +64,7 @@ def mergesort3(array):
         mergesort3(up)
         merge(array,bot,mid,up)
 
-#merges the 3 arrays together into one 
+#merges the 3 arrays together into one
 def merge(array,bot,mid,up):
     #conquer
     i = j = k = z = 0 # bot, mid, up, main array
